@@ -7,9 +7,9 @@ const SignIn = () => {
   return (
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center w-[100vw] font-manrope"
-      style={{ backgroundImage: "url('/Image1.jpg')" }}
+      style={{ backgroundImage: "url('/Imagenew.png')"}}
     >
-      <div className="w-[28%] h-[500px] bg-white p-6 shadow-lg">
+      <div className="w-[35%] h-[581px] bg-white p-6 shadow-lg">
         <h2 className="text-3xl font-semibold text-center text-purple-950 mb-[5%]">
           Sign In
         </h2>
@@ -24,7 +24,7 @@ const SignIn = () => {
             </label>
             <input
               type="email"
-              className="w-full mt-1 p-3 border rounded-none focus:outline-none focus:ring-2 focus:ring-purple-500 font-normal"
+              className="w-full mt-1 p-3 border rounded-none focus:outline-none focus:ring-2 focus:ring-purple-500 font-manrope"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -38,7 +38,7 @@ const SignIn = () => {
             </label>
             <input
               type="password"
-              className="w-full mt-1 p-3 border focus:outline-none focus:ring-2 focus:ring-purple-500 font-normal"
+              className="w-full mt-1 p-3 border focus:outline-none focus:ring-2 focus:ring-purple-500 font-manrope"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -48,7 +48,7 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="w-full rounded-none bg-gray-200 text-gray-400 py-3 square-md hover:bg-purple-700 transition"
+            className="w-full rounded-none bg-purple-700 text-gray-400 py-3 square-md hover:bg-gray-300 transition"
           >
             Next
           </button>
