@@ -1,10 +1,12 @@
-import SignIn from "./Components/SignIn";
+// import SignIn from "./Components/SignIn";
+import TripDetails from "./Components/Tripdetails";
 
 
 function App() {
   return (
     <>
-      <SignIn />
+      {/* <SignIn /> */}
+      <TripDetails />
     </>
   );
 }
