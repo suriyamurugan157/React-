@@ -86,7 +86,7 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="w-full rounded-none  bg-purple-700 text-gray-400 py-3 square-md hover:bg-gray-300 transition"
+            className="w-full rounded-none  bg-purple-700 text-white py-3 square-md hover:bg-gray-300 transition"
           >
             Next
           </button>
