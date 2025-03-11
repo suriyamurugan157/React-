@@ -31,9 +31,15 @@ const TripDetails = () => {
 
     const DateInput = ({ value, onChange }) => (
         <div className="relative min-w-[100px]">
-            <input type="date" value={value} onChange={(e) => onChange(e.target.value)} className="border p-2 w-full" />
+            <input
+                type="date"
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                className="border p-2 w-full focus:outline-none focus:ring-1 focus:ring-gray-300"
+            />
         </div>
     );
+    
 
     return (
         <div className="mt-0 p-6  bg-gray-50 min-h-screen w-[100vw] font-manrope">
