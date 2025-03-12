@@ -18,6 +18,8 @@ const TripDetails = () => {
     const [activeTab, setActiveTab] = useState("Trip Details");
     const tabs = ["Transporters", "Institutions", "Trip Details", "Users"];
 
+    
+
     const Dropdown = ({ label }) => (
         <div className="relative min-w-[184px]">
             <select className="appearance-none border border-gray-300 p-2 pr-10 w-full bg-white focus:outline-none">
