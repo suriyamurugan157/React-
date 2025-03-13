@@ -11,35 +11,35 @@ import { FaChartLine } from "react-icons/fa";
 
 const UserProfile = () => {
   return (
-    <div className="flex h-screen bg-gray-100 w-[100vw]">
+    <div className="flex h-screen bg-gray-100 w-[100vw] overflow-hidden">
       {/* Sidebar */}
-      <aside className="w-50 bg-violet-100  p-5 flex flex-col  ">
+      <aside className="w-30 bg-violet-100  p-5 flex flex-col">
         <h2 className="text-2xl font-bold mb-2 mt-"><img
           src="/Lgo 1.png"
           alt="Profile"
-          className="w-20 h-20  object-cover ml-5"
+          className="w-20 h-8  object-cover ml-[1%] mt-[0.5%]"
         /></h2>
-        <nav className="space-y-4 mt-5">
-          <a href="#" className="flex items-center space-x-3 text-w p-2 hover:bg-blue-950 ">
-          <LuLayoutDashboard className="text-xl" />  <span>Dashboard</span>
+        <nav className="space-y-3 mt-5">
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <LuLayoutDashboard className="text-xl" /> <span>Dashboard</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <FaTruckFast className="text-xl"/> <span>Transporters</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <FaTruckFast className="text-xl" /> <span>Transporters</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <BsBuilding className="text-xl" /> <span>Institutions</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <BsBuilding className="text-xl" /> <span>Institutions</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <TbMapPin2 className="text-xl" /> <span>Trip Details</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <TbMapPin2 className="text-xl" /> <span>Trip Details</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <PiUsersThreeFill className="text-xl" /> <span>Users</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <PiUsersThreeFill className="text-xl" /> <span>Users</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <MdInsertChartOutlined className="text-xl" /> <span>Reports</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <MdInsertChartOutlined className="text-xl" /> <span>Reports</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 hover:bg-blue-950 ">
-          <FaChartLine className="text-xl" />  <span>Track Status</span>
+          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-blue-950 transition">
+            <FaChartLine className="text-xl" /> <span>Track Status</span>
           </a>
         </nav>
       </aside>
@@ -55,15 +55,15 @@ const UserProfile = () => {
           />
         </div>
 
-        <main className="p-3">
+        <main className="p-6">
           {/* Header */}
-          <div className="flex items-center space-x-3 text-blue-900">
-            <AiOutlineLeft className=" te mt-5" />
-            <h1 className="text-xl font-semibold mt-5">View User</h1>
+          <div className="flex items-center space-x-1 text-blue-900">
+            <AiOutlineLeft className="ml-5 text-xl font-bold" />
+            <h1 className="text-xl font-semibold">View User</h1>
           </div>
 
           {/* Profile Picture Upload */}
-          <div className="mt-3 border-2 border-dashed border-gray-300 p-5 flex items-center mx-auto w-4/4 text-gray-500 rounded-none">
+          <div className="mt-3 border-2 border-dashed border-gray-300 p-5 flex items-center mx-auto w-[90%] text-gray-500 rounded-none">
             <img
               src="/profile 1.jpg"
               alt="Profile"
@@ -73,43 +73,43 @@ const UserProfile = () => {
           </div>
 
           {/* Form Section */}
-          <form className="mt-6 grid grid-cols-2 gap-6">
+          <form className="mt-6 grid grid-cols-2 gap-x-8 gap-y-6">
             {/* First Name */}
             <div>
-              <label className="block text-gray-700">First Name *</label>
+              <label className="block text-gray-700 text-left">First Name *</label>
               <input
                 type="text"
                 value="Vasanth"
-                className="w-800 mt-1 p-2 border rounded bg-white"
+                className="w-full mt-1 p-2 border rounded bg-gray-100"
                 disabled
               />
             </div>
 
             {/* Last Name */}
             <div>
-              <label className="block text-gray-700">Last Name *</label>
+              <label className="block text-gray-700 text-left">Last Name *</label>
               <input
                 type="text"
                 value="eee"
-                className="mt-1 p-2 border rounded bg-white"
+                className="w-full mt-1 p-2 border rounded bg-gray-100"
                 disabled
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-gray-700">Email *</label>
+              <label className="block text-gray-700 text-left">Email *</label>
               <input
                 type="email"
                 value="vasanth+5@venzotechnologies.com"
-                className="w-full mt-1 p-2 border rounded bg-white"
+                className="w-full mt-1 p-2 border rounded bg-gray-100"
                 disabled
               />
             </div>
 
             {/* Mobile Number */}
             <div>
-              <label className="block text-gray-700">Mobile Number *</label>
+              <label className="block text-gray-700 text-left">Mobile Number *</label>
               <input
                 type="text"
                 value="+91 432143214"
@@ -120,7 +120,7 @@ const UserProfile = () => {
 
             {/* Role */}
             <div>
-              <label className="block text-gray-700">Role *</label>
+              <label className="block text-gray-700 text-left">Role *</label>
               <select className="w-full mt-1 p-2 border rounded bg-white">
                 <option>Admin</option>
                 <option>User</option>
@@ -130,7 +130,7 @@ const UserProfile = () => {
 
             {/* District */}
             <div>
-              <label className="block text-gray-700">District *</label>
+              <label className="block text-gray-700 text-left">District *</label>
               <select className="w-full mt-1 p-2 border rounded bg-white">
                 <option>Cuddalore</option>
                 <option>Chennai</option>
@@ -140,7 +140,7 @@ const UserProfile = () => {
 
             {/* Zone */}
             <div>
-              <label className="block text-gray-700">Zone *</label>
+              <label className="block text-gray-700 text-left">Zone *</label>
               <select className="w-full mt-1 p-2 border rounded bg-white">
                 <option>East</option>
                 <option>West</option>
