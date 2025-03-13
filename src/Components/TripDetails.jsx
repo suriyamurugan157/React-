@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiFillCaretDown, AiOutlineCloudDownload,  } from "react-icons/ai";
+import { AiFillCaretDown, AiOutlineCloudDownload } from "react-icons/ai";
 
 
 const TripDetails = () => {

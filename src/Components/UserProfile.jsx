@@ -12,7 +12,7 @@ import { FaChartLine } from "react-icons/fa";
 
 const UserProfile = () => {
   return (
-    <div className="flex h-screen bg-white w-[100vw] overflow-y-auto">
+    <div className="flex  bg-white w-[100vw] overflow-y-auto overflow-x-hidden">
       {/* Sidebar */}
       <aside className="w-30 bg-violet-100  p-5 flex flex-col">
         <h2 className="text-2xl font-bold mb-2 "><img
@@ -20,7 +20,7 @@ const UserProfile = () => {
           alt="Profile"
           className="w-[75%] h-8  object-cover  mt-[0.5%]"
         /></h2>
-        <nav className="space-y-2 mt-[40%]">
+        <nav className="space-y-2 mt-[20%]">
           <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <LuLayoutDashboard className="text-xl" /> <span>Dashboard</span>
           </a>
@@ -56,15 +56,15 @@ const UserProfile = () => {
           />
         </div>
 
-        <main className="p-6">
+        <main className="p-4">
           {/* Header */}
           <div className="flex items-center space-x-1 text-blue-900">
-            <AiOutlineLeft className="ml-8 text-xl font-bold" />
+            <AiOutlineLeft className="ml-7 text-xl font-bold" />
             <h1 className="text-xl font-semibold">View User</h1>
           </div>
 
           {/* Profile Picture Upload */}
-          <div className="mt-8 border-2 border-dashed border-gray-300 p-5 flex items-center mx-auto w-[95%] text-gray-500 rounded-none">
+          <div className="mt-4 border-2 border-dashed border-gray-300 p-5 flex items-center mx-auto w-[95%] text-gray-500 rounded-none">
             <img
               src="/profile 1.jpg"
               alt="Profile"
@@ -74,7 +74,7 @@ const UserProfile = () => {
           </div>
 
           {/* Form Section */}
-          <form className="mt-12  mx-auto grid grid-cols-3 gap-x-5 gap-y-10 font-manrope">
+          <form className="mt-6  mx-auto grid grid-cols-3 gap-x-5 gap-y-6 font-manrope">
             {/* First Name */}
             <div>
               <label className=" ml-[8%] block text-black text-left">First Name *</label>
@@ -158,6 +158,8 @@ const UserProfile = () => {
                   <option>North</option>
                   <option>South</option>
                 </select>
+
+                {/* Custom Arrow Icon */}
                 <AiFillCaretDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" />
               </div>
             </div>
