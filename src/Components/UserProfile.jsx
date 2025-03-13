@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineLeft } from "react-icons/ai";
+import { AiOutlineLeft, AiFillCaretDown } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { BsBuilding } from "react-icons/bs";
@@ -9,43 +9,44 @@ import { MdInsertChartOutlined } from "react-icons/md";
 import { FaChartLine } from "react-icons/fa";
 
 
+
 const UserProfile = () => {
   return (
-    <div className="flex h-screen bg-gray-100 w-[100vw] overflow-hidden">
+    <div className="flex h-screen bg-white w-[100vw] overflow-y-auto">
       {/* Sidebar */}
       <aside className="w-30 bg-violet-100  p-5 flex flex-col">
-        <h2 className="text-2xl font-bold mb-2 mt-"><img
+        <h2 className="text-2xl font-bold mb-2 "><img
           src="/Lgo 1.png"
           alt="Profile"
           className="w-[75%] h-8  object-cover  mt-[0.5%]"
         /></h2>
         <nav className="space-y-2 mt-[40%]">
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <LuLayoutDashboard className="text-xl" /> <span>Dashboard</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <FaTruckFast className="text-xl" /> <span>Transporters</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <BsBuilding className="text-xl" /> <span>Institutions</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <TbMapPin2 className="text-xl" /> <span>Trip Details</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <PiUsersThreeFill className="text-xl" /> <span>Users</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <MdInsertChartOutlined className="text-xl" /> <span>Reports</span>
           </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-blue-900 hover:text-white hover:bg-purple-950 transition">
+          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
             <FaChartLine className="text-xl" /> <span>Track Status</span>
           </a>
         </nav>
       </aside>
 
       {/* Main Content */}
-      <div className="flex flex-col flex-1 bg-white shadow-md">
+      <div className=" flex-1 bg-white shadow-md">
         {/* Top Navbar */}
         <div className="bg-purple-950 p-3 flex justify-end items-center">
           <img
@@ -73,91 +74,102 @@ const UserProfile = () => {
           </div>
 
           {/* Form Section */}
-          <form className="mt-12 grid grid-cols-3 gap-x-5 gap-y-10">
+          <form className="mt-12  mx-auto grid grid-cols-3 gap-x-5 gap-y-10 font-manrope">
             {/* First Name */}
             <div>
-              <label className="block text-black text-left">First Name *</label>
+              <label className=" ml-[8%] block text-black text-left">First Name *</label>
               <input
                 type="text"
-                defaultvalue="Vasanth"
-                className="w-[60%] mt-1 p-2 text-gray-500 bg-gray-100 shadow-lg"
-                
+                defaultValue="Vasanth"
+                className="w-[70%] ml-[8%] mt-1 p-3 text-gray-500  border border-gray-200 text-xl font-manrope"
+
               />
             </div>
 
             {/* Last Name */}
             <div>
-              <label className="block text-gray-700 text-left">Last Name *</label>
+              <label className="block ml-[15%] text-black text-left">Last Name *</label>
               <input
                 type="text"
-                defaultvalue="eee"
-                className="w-[60%] mt-1 p-2 text-gray-500 bg-gray-100 shadow-lg"
-               
+                defaultValue="eee"
+                className="w-[70%] ml-[15%] mt-1 p-3 text-gray-500 border border-gray-200"
               />
             </div>
 
             {/* Mobile Number */}
             <div>
-              <label className="block text-gray-700 text-left">Mobile Number *</label>
+              <label className="block ml-[22%] text-black text-left">Mobile Number *</label>
               <input
                 type="text"
-                defaultvalue="+91 432143214"
-                className="w-[60%] mt-1 p-2 text-gray-500 bg-gray-100 shadow-lg"
-               
+                defaultValue="+91 432143214"
+                className="w-[70%] ml-[22%] mt-1 p-3 text-gray-500 border border-gray-200 "
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-gray-700 text-left">Email *</label>
+              <label className="block ml-[8%] text-black text-left">Email *</label>
               <input
                 type="email"
-                defaultvalue="vasanth+5@venzotechnologies.com"
-                className="w-[60%] mt-1 p-2 text-gray-500 bg-gray-100 shadow-lg"
-                
+                defaultValue="vasanth+5@venzotechnologies.com"
+                className="w-[70%] ml-[8%] mt-1 p-3 text-gray-500 border border-gray-200 "
+
               />
             </div>
 
-            
+
 
             {/* Role */}
-            <div>
-              <label className="block text-gray-700 text-left">Role *</label>
-              <select className="w-[60%] mt-1 p-2  bg-white shadow-lg">
-                <option>Admin</option>
-                <option>User</option>
-                <option>Manager</option>
-              </select>
+            <div className="relative w-[70%] ml-[15%]">
+              <label className="block text-black text-left">Role *</label>
+
+              <div className="relative">
+                <select className="w-full mt-1 p-3 text-black border border-gray-200 appearance-none pr-10">
+                  <option>Admin</option>
+                  <option>User</option>
+                  <option>Manager</option>
+                </select>
+                <AiFillCaretDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" />
+              </div>
             </div>
 
             {/* District */}
-            <div>
-              <label className="block text-gray-700 text-left">District *</label>
-              <select className="w-[60%] mt-1 p-2  bg-white shadow-lg">
-                <option>Cuddalore</option>
-                <option>Chennai</option>
-                <option>Madurai</option>
-              </select>
+            <div className="relative w-[70%] ml-[22%]">
+              <label className="block text-black text-left">District *</label>
+
+              <div className="relative">
+                <select className="w-full mt-1 p-3 text-black border border-gray-200 appearance-none pr-10">
+                  <option>Cuddalore</option>
+                  <option>Chennai</option>
+                  <option>Madurai</option>
+                </select>
+                <AiFillCaretDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" />
+              </div>
             </div>
 
             {/* Zone */}
-            <div>
-              <label className="block text-gray-700 text-left">Zone *</label>
-              <select className="w-[60%] mt-1 p-2  bg-white shadow-lg">
-                <option>East</option>
-                <option>West</option>
-                <option>North</option>
-                <option>South</option>
-              </select>
+            <div className="relative w-[70%] ml-[8%]">
+              <label className="block text-black text-left">Zone *</label>
+
+              <div className="relative">
+                <select className="w-full mt-1 p-3 text-black border border-gray-200 appearance-none pr-10">
+                  <option>East</option>
+                  <option>West</option>
+                  <option>North</option>
+                  <option>South</option>
+                </select>
+                <AiFillCaretDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none" />
+              </div>
             </div>
+
           </form>
 
           {/* Buttons */}
-          <div className="mt-6 flex space-x-4">
-            <button className="bg-white text-orange-500 px-6 py-2 rounded-none border-orange-500 hover:bg-red-600">
+          <div className="mt-20 flex space-x-4">
+            <button className="bg-white text-orange-500 ml-11  px-6 py-2 rounded-none border-orange-500 hover:bg-orange-700 font-manrope">
               Cancel
             </button>
-            <button className="bg-orange-500 text-white px-6 py-2 rounded-none hover:bg-orange-600">
+            <button className="bg-orange-500 text-white px-6 py-2 rounded-none hover:bg-orange-600 font-manrope">
               Edit
             </button>
           </div>
