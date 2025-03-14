@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AiOutlineLeft, AiFillCaretDown } from "react-icons/ai";
 import { FaTruckFast } from "react-icons/fa6";
 import { LuLayoutDashboard } from "react-icons/lu";
@@ -11,8 +12,12 @@ import { FaChartLine } from "react-icons/fa";
 
 
 const UserProfile = () => {
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("Users");
+
+
   return (
-    <div className="flex  bg-white w-[100vw] overflow-y-auto overflow-x-hidden">
+    <div className="flex  bg-white w-[100vw] overflow-y-auto">
       {/* Sidebar */}
       <aside className="w-30 bg-violet-100  p-5 flex flex-col">
         <h2 className="text-2xl font-bold mb-2 "><img
@@ -21,27 +26,31 @@ const UserProfile = () => {
           className="w-[75%] h-8  object-cover  mt-[0.5%]"
         /></h2>
         <nav className="space-y-2 mt-[20%]">
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <LuLayoutDashboard className="text-xl" /> <span>Dashboard</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <FaTruckFast className="text-xl" /> <span>Transporters</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <BsBuilding className="text-xl" /> <span>Institutions</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <TbMapPin2 className="text-xl" /> <span>Trip Details</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <PiUsersThreeFill className="text-xl" /> <span>Users</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <MdInsertChartOutlined className="text-xl" /> <span>Reports</span>
-          </a>
-          <a href="#" className="flex items-center space-x-3 p-2 text-purple-900 hover:text-white hover:bg-purple-950 transition">
-            <FaChartLine className="text-xl" /> <span>Track Status</span>
-          </a>
+          {[
+            { name: "Dashboard", icon: <LuLayoutDashboard /> },
+            { name: "Transporters", icon: <FaTruckFast /> },
+            { name: "Institutions", icon: <BsBuilding /> },
+            { name: "Trip Details", icon: <TbMapPin2 />, path: "/trip-details" },
+            { name: "Users", icon: <PiUsersThreeFill /> }, // 
+            { name: "Reports", icon: <MdInsertChartOutlined /> },
+            { name: "Track Status", icon: <FaChartLine /> },
+          ].map((item) => (
+            <a
+              key={item.name}
+              href="#"
+              className={`flex items-center space-x-3 p-2 transition ${activeTab === item.name
+                  ? "bg-purple-950 text-white" 
+                  : "text-purple-900 hover:bg-purple-950 hover:text-white"
+                }`}
+                onClick={() => {
+                  setActiveTab(item.name);
+                  if (item.path) navigate(item.path); // ✅ Navigate if path exists
+                }}
+            >
+              <span className="text-xl">{item.icon}</span>
+              <span>{item.name}</span>
+            </a>
+          ))}
         </nav>
       </aside>
 
@@ -168,7 +177,7 @@ const UserProfile = () => {
 
           {/* Buttons */}
           <div className="mt-20 flex space-x-4">
-            <button className="bg-white text-orange-500 ml-11  px-6 py-2 rounded-none border-orange-500 hover:bg-orange-700 font-manrope">
+            <button className="bg-white text-orange-500 ml-11  px-6 py-2 rounded-none border-orange-500 hover:bg-red-100 font-manrope">
               Cancel
             </button>
             <button className="bg-orange-500 text-white px-6 py-2 rounded-none hover:bg-orange-600 font-manrope">

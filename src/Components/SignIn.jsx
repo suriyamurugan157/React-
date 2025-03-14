@@ -32,7 +32,7 @@ const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateInputs()) {
-      navigate("/trip-details");
+      navigate("/user-profile");
     }
   };
 
