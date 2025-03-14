@@ -37,7 +37,7 @@ const UserProfile = () => {
           ].map((item) => (
             <a
               key={item.name}
-              href="#"
+           
               className={`flex items-center space-x-3 p-2 transition ${activeTab === item.name
                   ? "bg-purple-950 text-white" 
                   : "text-purple-900 hover:bg-purple-950 hover:text-white"
