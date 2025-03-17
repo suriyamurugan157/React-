@@ -19,6 +19,7 @@ const UserProfile = () => {
   return (
     <div className="flex  bg-white w-[100vw] overflow-y-auto">
       {/* Sidebar */}
+      
       <aside className="w-30 bg-violet-100  p-5 flex flex-col">
         <h2 className="text-2xl font-bold mb-2 "><img
           src="/Lgo 1.png"
@@ -56,6 +57,7 @@ const UserProfile = () => {
 
       {/* Main Content */}
       <div className=" flex-1 bg-white shadow-md">
+
         {/* Top Navbar */}
         <div className="bg-purple-950 p-3 flex justify-end items-center">
           <img
@@ -84,6 +86,7 @@ const UserProfile = () => {
 
           {/* Form Section */}
           <form className="mt-6  mx-auto grid grid-cols-3 gap-x-5 gap-y-6 font-manrope">
+
             {/* First Name */}
             <div>
               <label className=" ml-[8%] block text-black text-left">First Name *</label>
@@ -133,7 +136,7 @@ const UserProfile = () => {
               <label className="block text-black text-left">Role *</label>
 
               <div className="relative">
-                <select className="w-full mt-1 p-3 text-black border border-gray-200 appearance-none pr-10">
+                <select className="w-full mt-1 p-3 text-black border-gray-200 border-gray-200 appearance-none pr-10">
                   <option>Admin</option>
                   <option>User</option>
                   <option>Manager</option>
